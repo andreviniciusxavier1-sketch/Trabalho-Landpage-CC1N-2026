@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --accent: #8a0202;
+    --primary-color-dark: #630101;
+    --text-dark: #211f1b;
+    --white: #e6e0dd;
+    --input-color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../../img/background.jpg);;
+    background-size: cover;
+    background-position: right;
+}
+.wrapper {
+    box-sizing: border-box;
+    background-color: var(--white);
+    height: 100vh;
+    width: max(40%, 500px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.form p{
+    color: var(--text-dark);  
+    font-weight: 500;;
+}
+
+.politics p {
+    font-weight: 500;;
+    color: var(--primary-color-dark);
+    
+}
+
+a{
+    text-decoration: none;
+    color:var(--accent);
+    text-decoration:underline
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+
+
+
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent);
+    color: var(--white);
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px  0 0  10px;
+    font-size: 1.5rem;
+}
+
+form input:not(#fine-print){
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 0.2s;
+}
+form select{
+box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    font: inherit;
+    border-radius: 10px;
+    border: 2px solid var(--input-color);
+    background-color: var(--input-color);
+    transition: 0.2s;   
+    text-align: center;
+    text-transform: uppercase;
+    font: inherit;
+    font-weight: 500;
+}
+
+form input:not(#fine-print):hover {
+    border: 2px solid var(--primary-color-dark);
+}
+
+form input:not(#fine-print):focus {
+    outline: none;
+    border-color: var(--text-dark);
+}
+
+
+
+div:has(input:focus) > label {
+    background-color: var(--text-dark);
+}
+
+form select:focus {
+    outline: none;
+    border-color: var(--text-dark);
+}
+
+select > option{
+    background-color: var(--accent);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    font: inherit;
+    font-weight: 500;
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 2em;
+    background-color: var(--accent);
+    font:inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    color: var(--white);
+}
+    
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 2em;
+    font:inherit;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--accent);
+    transform: 150ms ease;
+}
+
+form button:hover{
+    outline: none;
+    background-color: var(--primary-color-dark);
+}
+
+button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 2em;
+    font:inherit;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--text-dark);
+    transform: 0.2ms;
+}
+
+button a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media(max-width: 1100px){
+ .wrapper {
+    width: min(600px, 100%);
+    border-radius: 0;
+ }   
+
+}
